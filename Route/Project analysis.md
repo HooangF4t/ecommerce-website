@@ -30,7 +30,7 @@ I) Phân tích dự án:
   2) User table
      - id (type: int): là trường Khóa chính tự tăng để quản lý từng bản ghi
      - role_id ( type: int) là foreign để kết nối tới "role" ở cột (id)
-     - fullname (type: string) tên của user [ 50 ký tự ]
+     - fullname (type: string) hay còn gọi là varchar trong database tên của user [ 50 ký tự ]
      - email ( type: string) [ 150 ký tự ]
      - phone_number ( type: string) có số cần +84 hay 0 ở đầu nên dùng string [ 20 ký tự ]
      - address (type: string) [ 200 ký tự ]
@@ -75,6 +75,7 @@ I) Phân tích dự án:
 
     7.1) Order table ( bảng quản lý đơn hàng)
      - id (type: int): là trường Khóa chính tự tăng để quản lý từng bản ghi
+     - user_id (type: int) với user đang dùng tài khoảng A thì user này có thể truy vấn xem đơn hàng của họ có tình trạng như thế nào ( lịch sử mua hàng, ...) và là foreign key liên kết với bảng "user" ở cột (id)
      - fullname (type: string) [ 60 ký tự ]
      - email (type: string) [ 150 ký tự ]
      - phone_number ( type: string) có số cần +84 hay 0 ở đầu nên dùng string [ 20 ký tự ]
