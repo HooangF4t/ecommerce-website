@@ -1,15 +1,15 @@
 CREATE TABLE `Role` (
-  `id` int PRIMARY KEY,
-  `name` varchar(20) NOT NULL
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(255)
 );
 
 CREATE TABLE `User` (
-  `id` int PRIMARY KEY,
-  `fullname` varchar(50),
-  `email` varchar(150) UNIQUE,
-  `phone_number` varchar(20),
-  `address` varchar(200),
-  `password` varchar(32),
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `fullname` varchar(255),
+  `email` varchar(255),
+  `phone_number` varchar(255),
+  `address` varchar(255),
+  `password` varchar(255),
   `role_id` int,
   `created_at` datetime,
   `update_at` datetime,
@@ -17,17 +17,17 @@ CREATE TABLE `User` (
 );
 
 CREATE TABLE `Category` (
-  `id` int PRIMARY KEY,
-  `name` varchar(100) NOT NULL
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(255)
 );
 
 CREATE TABLE `Product` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `category_id` int,
-  `title` varchar(350),
+  `title` varchar(255),
   `price` int,
   `discount` int,
-  `thumbnail` varchar(500),
+  `thumbnail` varchar(255),
   `description` longtext,
   `created_at` datetime,
   `update_ad` datetime,
@@ -35,36 +35,36 @@ CREATE TABLE `Product` (
 );
 
 CREATE TABLE `Galery` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `product_id` int,
-  `thumbnail` varchar(500) NOT NULL
+  `thumbnail` varchar(255)
 );
 
 CREATE TABLE `Feedback` (
-  `id` int PRIMARY KEY,
-  `firstname` varchar(30),
-  `lastname` varchar(30),
-  `email` varchar(150),
-  `phone_number` varchar(20),
-  `subject_name` varchar(200),
-  `note` varchar(500)
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `firstname` varchar(255),
+  `lastname` varchar(255),
+  `email` varchar(255),
+  `phone_number` varchar(255),
+  `subject_name` varchar(255),
+  `note` varchar(255)
 );
 
 CREATE TABLE `Oders` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
-  `fullname` varchar(50),
-  `email` varchar(150),
-  `phone_number` varchar(20),
-  `address` varchar(200),
-  `note` varchar(500),
+  `fullname` varchar(255),
+  `email` varchar(255),
+  `phone_number` varchar(255),
+  `address` varchar(255),
+  `note` varchar(255),
   `order_date` datetime,
   `status` int,
   `total_money` int
 );
 
 CREATE TABLE `Order_Deltais` (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `order_id` int,
   `product_id` int,
   `price` int,
