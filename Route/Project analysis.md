@@ -71,7 +71,8 @@ I) Phân tích dự án:
        + product 1 x số lượng x giá thời điểm mua
        + product 2 x số lượng x giá thời điểm mua
      - product list:
-    7.1) Order table ( bảng quản lý đơn hàng)
+
+  7.1) Order table ( bảng quản lý đơn hàng)
      - id (type: int): là trường Khóa chính tự tăng để quản lý từng bản ghi
      - fullname (type: string) [ 60 ký tự ]
      - email (type: string) [ 150 ký tự ]
@@ -81,7 +82,7 @@ I) Phân tích dự án:
      - order_date (type: datetime) thời điểm đặt đơn hàng
      - status (type: int) trạng thái của đơn hàng như đang chờ duyệt (pending), đã được duyệt (approved), đang giao hàng (on delivery), đã giao hàng thành công (successfully), đã hủy đơn hàng (cancelled)\
      -  total_money (type: int) tổng tiền của đơn hàng
-    7.1) Order detail table ( bảng chi tiết đơn hàng)
+  7.2) Order detail table ( bảng chi tiết đơn hàng)
      - id (type: int): là trường Khóa chính tự tăng để quản lý từng bản ghi
      - order_id (type: int) chi tiết sản phẩm này thuộc đơn hàng nào và nó cũng là foreign key liên kết với  "order table" tại cột (id)
      - product_id (type: int) sản phẩm này là gì ( dựa vào đây sẽ lấy được thông tin của sản phẩm như tiêu đề hay hình ảnh) nên là foreign key liên kết với  "product table" tại cột (id)
